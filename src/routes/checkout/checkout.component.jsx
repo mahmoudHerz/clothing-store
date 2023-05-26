@@ -8,10 +8,12 @@ import "./checkout.styles.scss";
 
 const CheckOut = () => {
   const { cartItems, cartTotal } = useContext(CartContext);
+  const curr = "$";
 
   return (
     <div className="checkout-container">
-      <div className="checkout-header">
+      <h2 className="checkout-header">Shopping Cart</h2>
+      {/* <div className="checkout-header">
         <div className="header-block">
           <span>Product</span>
         </div>
@@ -27,11 +29,11 @@ const CheckOut = () => {
         <div className="header-block">
           <span>Remove</span>
         </div>
-      </div>
+      </div> */}
       {cartItems.map((cartItem) => (
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
-      <div className="total">TOTAL: ${cartTotal}</div>
+      <div className="total">TOTAL: {curr + cartTotal}</div>
     </div>
   );
 };

@@ -1,25 +1,17 @@
 .checkout-item-container {
-  width: 100%;
   display: flex;
-  min-height: 100px;
   border-bottom: 1px solid darkgrey;
   padding: 15px 0;
   font-size: 20px;
   align-items: center;
+  justify-content: space-between;
+  // max-height: 200px;
 
-  .image-container {
-    width: 23%;
-    padding-right: 15px;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .name,
-  .quantity,
-  .price {
-    width: 23%;
+  img {
+    object-fit: cover;
+    width: 200px;
+    height: 230px;
+    // display: block;
   }
 
   .quantity {
@@ -37,5 +29,15 @@
   .remove-button {
     padding-left: 12px;
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .checkout-item-container {
+    font-size: 16px;
+    img {
+      width: 100px;
+      height: 120px;
+    }
   }
 }

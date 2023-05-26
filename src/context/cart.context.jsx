@@ -44,11 +44,11 @@ export const CartProvider = ({ children }) => {
   const [cartTotal, setCartTotal] = useState(0);
 
   const addItemToCart = (productToAdd) => {
-    return setCartItems(increaseOrAddItem(cartItems, productToAdd));
+    setCartItems(increaseOrAddItem(cartItems, productToAdd));
   };
 
   const removeItemFromCart = (productToRemove) => {
-    return setCartItems(decreaseOrRemoveItem(cartItems, productToRemove));
+    setCartItems(decreaseOrRemoveItem(cartItems, productToRemove));
   };
 
   const clearItemFromCart = (cartItemToClear) => {

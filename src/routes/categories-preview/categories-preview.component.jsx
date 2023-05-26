@@ -6,9 +6,8 @@ import { CategoriesContext } from "../../context/categories.context";
 
 const CategoriesPreview = () => {
   const { categoriesMap } = useContext(CategoriesContext);
-
   return (
-    <>
+    <div className="container">
       {Object.keys(categoriesMap).map((title) => (
         <CategoryPreview
           key={title}
@@ -16,7 +15,7 @@ const CategoriesPreview = () => {
           product={categoriesMap[title]}
         />
       ))}
-    </>
+    </div>
   );
 };
 

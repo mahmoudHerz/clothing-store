@@ -15,7 +15,7 @@ const Category = () => {
   }, []);
 
   return (
-    <>
+    <div className="container">
       <h2 className="category-title">{category.toUpperCase()}</h2>
       <div className="products-container">
         {categoriesMap[category] &&
@@ -23,7 +23,7 @@ const Category = () => {
             <ProductCard key={product.id} product={product} />
           ))}
       </div>
-    </>
+    </div>
   );
 };
 

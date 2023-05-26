@@ -43,6 +43,7 @@
 
   .body {
     height: 90px;
+    min-width: 150px;
     padding: 0 25px;
     display: flex;
     flex-direction: column;
@@ -63,6 +64,26 @@
     p {
       font-weight: lighter;
       font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .directory-item-container {
+    height: 200px;
+
+    .body {
+      height: 80px;
+      min-width: 120px;
+      padding: 0 18px;
+
+      h2 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+      }
     }
   }
 }

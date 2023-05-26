@@ -12,3 +12,20 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 800px) {
+  .sign-up-container {
+    width: 100%;
+    .buttons-container {
+      justify-content: unset;
+      gap: 16px;
+    }
+    .button-container {
+      min-width: unset;
+      height: unset;
+      line-height: unset;
+      padding: 14px 18px;
+      font-size: 14px;
+    }
+  }
+}
